@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.active {
+    @apply font-normal text-lg tracking-wide text-[#262261] transition-colors duration-200
+}
+
+.default {
+    @apply font-normal text-lg text-white transition-colors duration-200
+}
+
+.btn-primary {
+    @apply md:mb-0 py-1 px-4 md:px-8 md:py-2 text-lg rounded text-white bg-green-700 hover:bg-gray-500
+}
+
+.btn-secondary {
+    @apply md:mb-0 px-2 py-1 md:px-5 md:py-2 my-3 text-xs rounded-full bg-gradient-to-r from-lime-500 to-green-500 text-white
+}
+
+.btn-info {
+    @apply md:mb-0 px-2 py-1 md:px-8 md:py-3 my-3 text-lg uppercase rounded-lg shadow-md bg-gradient-to-r from-lime-500 to-green-500 text-white
+}
+
+.btn-outlined {
+    @apply md:font-medium transition duration-200 shadow-md my-2 md:mb-0 px-3 py-1 md:px-7 md:py-2 md:text-lg rounded text-white hover:bg-green-700 hover:border-transparent border-2 border-green-200 hover:text-white
+}

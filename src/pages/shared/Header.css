@@ -1,0 +1,10 @@
+.i{
+    transition: all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+}
+.i::after{
+    border-bottom: 4px;
+    border-color: #151A4F;
+}

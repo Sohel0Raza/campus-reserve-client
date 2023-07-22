@@ -12,11 +12,11 @@ body {
 }
 
 .default {
-    @apply font-normal text-lg text-white transition-colors duration-200
+    @apply font-normal text-lg 	
 }
 
 .btn-primary {
-    @apply md:mb-0 py-1 px-4 md:px-8 md:py-2 text-lg rounded text-white bg-green-700 hover:bg-gray-500
+    @apply md:mb-0 py-1 px-2 md:px-6 md:py-2 text-sm rounded text-white transition ease-in-out delay-150 bg-[#151A4F] hover:-translate-y-1 hover:scale-110  hover:bg-[#2e6f8b]  duration-300 
 }
 
 .btn-secondary {
@@ -28,5 +28,5 @@ body {
 }
 
 .btn-outlined {
-    @apply md:font-medium transition duration-200 shadow-md my-2 md:mb-0 px-3 py-1 md:px-7 md:py-2 md:text-lg rounded text-white hover:bg-green-700 hover:border-transparent border-2 border-green-200 hover:text-white
+    @apply md:font-normal transition duration-300 delay-300 ease-in shadow-md my-4 mx-5 md:mb-0 px-2 py-1 md:px-4 md:py-2 md:text-lg rounded-xl hover:bg-[#151A4F] hover:border-transparent border-b-4 border-[#151A4F] hover:text-white 
 }

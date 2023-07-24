@@ -4,7 +4,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 const HomeBanner = () => {
   return (
     <div>
-      <div className="md:flex justify-center items-center mx-auto my-5">
+      <div className="md:flex justify-center items-center mx-auto mb-5 md:pt-10">
         <div className="md:py-5 md:w-1/2">
           <h2 className="text-2xl md:text-4xl font-bold leading-10 p-5">
             <span className="text-[#D62929]">Unlock Your</span> <br />

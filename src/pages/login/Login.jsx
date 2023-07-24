@@ -74,7 +74,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="md:flex items-center p-5 md:p-10">
+        <div className="md:flex items-center p-5 md:px-10 pt-24">
             <div className="md:w-1/2 md:ml-10 p-5 md:p-0">
                 <Lottie
                     className="w-full"

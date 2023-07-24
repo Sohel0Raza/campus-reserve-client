@@ -61,7 +61,7 @@ const SingUp = () => {
     };
   };
   return (
-    <div className="md:flex items-center bg-slate-100 p-5 md:p-10">
+    <div className="md:flex items-center bg-slate-100 p-5 md:px-10 pt-28">
       <div className="md:w-1/2 md:ml-20 p-5 md:p-0">
         <Lottie
           className="w-full"

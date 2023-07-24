@@ -8,11 +8,11 @@ body {
 }
 
 .active {
-    @apply font-normal text-lg tracking-wide text-[#2E7FE9] transition-colors duration-200
+    @apply font-extrabold tracking-wide text-[#2E7FE9] transition-colors duration-200
 }
 
 .default {
-    @apply font-normal text-lg 	text-[#3c3a4f]
+    @apply font-semibold text-[#3c3a4f]
 }
 
 .btn-primary {

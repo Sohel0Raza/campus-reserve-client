@@ -12,7 +12,7 @@ const Colleges = () => {
     }
     return (
         <div>
-            <h2 className="uppercase text-center text-3xl mb-10 md:my-20 font-semibold"><span className="text-[#D62929]">All</span> <span className="">College</span></h2>
+            <h2 className="uppercase text-center text-3xl mb-10 md:mb-20 md:pt-28 font-semibold"><span className="text-[#D62929]">All</span> <span className="">College</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {colleges.map(college => <Card
                     key={college.collegeName}

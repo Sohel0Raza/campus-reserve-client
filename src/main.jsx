@@ -14,6 +14,7 @@ import ErrorPage from './pages/errorPage/ErrorePage';
 import Colleges from './pages/colleges/Colleges';
 import CollegeDetails from './components/CollegeDetails';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Admission from './pages/admission/Admission';
 const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: '/collegeDetails/:id',
         element: <CollegeDetails />,
         loader: () => fetch("http://localhost:5000/colleges")
+      },
+      {
+        path: '/admission',
+        element: <Admission />
       },
       {
         path: '/login',

@@ -5,7 +5,7 @@ const useCollege = () => {
         queryKey: ["colleges"],
         queryFn: async () => {
             const res = await fetch(
-                "http://localhost:5000/colleges"
+                "https://campus-reserve-server-smoky.vercel.app/colleges"
             );
             console.log(res)
             return res.json();

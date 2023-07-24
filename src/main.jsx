@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: '/collegeDetails/:id',
         element: <CollegeDetails />,
-        loader: () => fetch("http://localhost:5000/colleges")
+        loader: () => fetch("https://campus-reserve-server-smoky.vercel.app/colleges")
       },
       {
         path: '/admission',

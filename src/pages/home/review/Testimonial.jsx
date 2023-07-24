@@ -2,25 +2,26 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import { useEffect, useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import useReview from '../../../hooks/useReview';
 
 const Testimonial = () => {
-    const [reviews, setReview] = useState([])
-    console.log(reviews)
-    useEffect(() => {
-        fetch('http://localhost:5000/review')
-            .then(res => res.json())
-            .then(data => setReview(data))
-    }, [])
+    const [reviews, loading] = useReview()
+    if (loading) {
+        return <div className="flex justify-center md:mt-40"><span className="loading loading-bars loading-xs"></span>
+            <span className="loading loading-bars loading-sm"></span>
+            <span className="loading loading-bars loading-md"></span>
+            <span className="loading loading-bars loading-lg"></span>
+        </div>
+    }
     return (
         <div className='mb-10'>
             <h2 className="uppercase text-center text-3xl mt-20 font-semibold"><span className="text-[#D62929]">College</span> <span className="">Review</span></h2>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 
                 {reviews.map(review => <SwiperSlide
-                    key={review.name}>
+                    key={review._id}>
                     <div className='mx-24 text-center'>
                         <div className='h-12 w-12 mx-auto'>
                             <img src={review.image} alt="" />

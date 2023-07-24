@@ -78,34 +78,35 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end md:mr-7">
-                    
+
                     <div className="ml-5">
                         {user ? (
                             <>
                                 <div className="flex justify-between items-center">
-                                    <div className="h-7 w-7 mr-3">
-                                        <img
-                                            className="h-full w-full rounded-full"
-                                            src={user?.photoURL}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <button className="btn-primary" onClick={handleLogOut}>
-                                        SIGN OUT
-                                    </button>
+                                    <div className="h-7 w-7 mr-3 tooltip tooltip-open tooltip-left tooltip-primary"
+                                        data-tip={user.displayName}>
+                                    <img
+                                        className="h-full w-full rounded-full"
+                                        src={user?.photoURL}
+                                        alt=""
+                                    />
                                 </div>
-                            </>
-                        ) : (
-                            <>
-                                <Link to="/login">
-                                    <button className="btn-primary">Login</button>
-                                </Link>
-                            </>
+                                <button className="btn-primary" onClick={handleLogOut}>
+                                    SIGN OUT
+                                </button>
+                            </div>
+                    </>
+                    ) : (
+                    <>
+                        <Link to="/login">
+                            <button className="btn-primary">Login</button>
+                        </Link>
+                    </>
                         )}
-                    </div>
                 </div>
             </div>
         </div>
+        </div >
     );
 };
 

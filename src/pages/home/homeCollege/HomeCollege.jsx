@@ -4,7 +4,7 @@ import Card from "../../../components/Card";
 const HomeCollege = () => {
     const [allCollege, setAllCollege] = useState([])
     useEffect(()=>{
-        fetch('colleges.json')
+        fetch('http://localhost:5000/colleges')
         .then(res=> res.json())
         .then(data=> setAllCollege(data))
     },[])

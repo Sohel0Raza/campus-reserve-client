@@ -11,23 +11,28 @@ import AuthProvider from './providers/AuthProvider';
 import Login from './pages/login/Login';
 import SingUp from './pages/login/SingUp';
 import ErrorPage from './pages/errorPage/ErrorePage';
+import Colleges from './pages/colleges/Colleges';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement:<ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: ([
       {
         path: '/',
         element: <Home />
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: '/colleges',
+        element: <Colleges />
       },
       {
-        path:'/singUp',
-        element:<SingUp/>
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/singUp',
+        element: <SingUp />
       }
     ])
   },

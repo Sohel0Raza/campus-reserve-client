@@ -1,6 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo1.png"
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "User Log Out Successful",
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+            })
+            .catch((error) => {
+                if (error) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error...",
+                        text: `${error}`,
+                    });
+                }
+            });
+    };
     const navItems = (
         <>
             <NavLink
@@ -51,8 +78,30 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end md:mr-7">
-                    <div className="form-control">
-                        <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+                    
+                    <div className="ml-5">
+                        {user ? (
+                            <>
+                                <div className="flex justify-between items-center">
+                                    <div className="h-7 w-7 mr-3">
+                                        <img
+                                            className="h-full w-full rounded-full"
+                                            src={user?.photoURL}
+                                            alt=""
+                                        />
+                                    </div>
+                                    <button className="btn-primary" onClick={handleLogOut}>
+                                        SIGN OUT
+                                    </button>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <Link to="/login">
+                                    <button className="btn-primary">Login</button>
+                                </Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import useReview from '../../../hooks/useReview';
+import SectionTitle from '../../../components/SectionTitle ';
 
 const Testimonial = () => {
     const [reviews, loading] = useReview()
@@ -17,9 +18,8 @@ const Testimonial = () => {
     }
     return (
         <div className='mb-10'>
-            <h2 className="uppercase text-center text-3xl mt-20 font-semibold"><span className="text-[#D62929]">College</span> <span className="">Review</span></h2>
+            <SectionTitle heading='College' subHeading='Review' />
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-
                 {reviews.map(review => <SwiperSlide
                     key={review._id}>
                     <div className='mx-24 text-center'>

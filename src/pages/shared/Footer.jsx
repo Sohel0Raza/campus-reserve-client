@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <div>
             <div>
-                <div className='h-'>
-                    <Wave fill='#85d2f2'
+                <div className=''>
+                    <Wave fill='#3c3e3e'
                         paused={false}
                         options={{
                             height: 50,
@@ -16,7 +16,7 @@ const Footer = () => {
                     >
                     </Wave>
                 </div>
-                <footer className="footer p-10 -mt-20 bg-[#85d2f2] text-base-content">
+                <footer className="footer p-10 -mt-20 bg-[#3c3e3e] text-white">
                     <div>
                         <div className='h-16 w-20'>
                             <img src={img} alt="" />

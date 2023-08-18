@@ -1,4 +1,5 @@
 import Card from "../../../components/Card";
+import SectionTitle from "../../../components/SectionTitle ";
 import useCollege from "../../../hooks/useCollege";
 
 const HomeCollege = () => {
@@ -11,8 +12,8 @@ const HomeCollege = () => {
         </div>
     }
     return (
-        <div>
-            <h2 className="uppercase text-center text-3xl mb-10 md:mb-20 font-semibold"><span className="text-[#D62929]">Suggest</span> <span className="">College</span></h2>
+        <div className="md:mb-20">
+            <SectionTitle heading='Suggest' subHeading='College' />
             <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10">
                 {colleges.slice(0, 3).map(college => <Card
                     key={college._id}

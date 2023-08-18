@@ -5,7 +5,7 @@ const useReview = () => {
         queryKey: ["reviews"],
         queryFn: async () => {
             const res = await fetch(
-                "https://campus-reserve-server-smoky.vercel.app/review"
+                "http://localhost:5000/review"
             );
             console.log(res)
             return res.json();

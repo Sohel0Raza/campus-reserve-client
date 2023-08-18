@@ -8,15 +8,15 @@ body {
 }
 
 .active {
-    @apply font-extrabold tracking-wide text-[#2E7FE9] transition-colors duration-200
+    @apply font-semibold p-2 tracking-wide bg-[#2E7FE9] transition duration-700 delay-100 ease-in-out rounded-tl-2xl rounded-br-2xl   text-white 
 }
 
 .default {
-    @apply font-semibold text-[#3c3a4f]
+    @apply font-semibold p-2 text-[#3c3a4f] hover:transition hover:duration-700 hover:delay-100 hover:ease-in-out hover:rounded-tl-2xl hover:rounded-br-2xl   hover:text-white hover:bg-[#151A4F]
 }
 
 .btn-primary {
-    @apply md:mb-0 py-1 px-2 md:px-6 md:py-2 text-sm rounded text-white transition ease-in-out delay-150 bg-[#151A4F] hover:-translate-y-1 hover:scale-110  hover:bg-[#2e6f8b]  duration-300 
+    @apply md:mb-0 py-1 px-2 md:px-6 md:py-2 text-sm shadow-lg hover:rounded-tr-2xl hover:rounded-bl-2xl text-white transition ease-in-out delay-150 bg-[#151A4F]  hover:bg-[#2E7FE9]  duration-300 
 }
 .btn-secondary {
     @apply md:mb-0 py-1 px-2 md:px-6 md:py-3 text-lg rounded text-white bg-[#F16623]  hover:bg-[#953333]  duration-300 

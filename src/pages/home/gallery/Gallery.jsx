@@ -11,13 +11,14 @@ import img5 from "../../../assets/gallery/img5.png";
 import img6 from "../../../assets/gallery/img6.png";
 import img7 from "../../../assets/gallery/img7.png";
 import img8 from "../../../assets/gallery/img8.png";
+import SectionTitle from '../../../components/SectionTitle ';
 
 
 
 const Gallery = () => {
     return (
         <div className='text-center mt-10'>
-            <h2 className="uppercase text-center text-3xl mb-10 md:mt-20 font-semibold"><span className="text-[#D62929]">Photo</span> <span className="">Gallery</span></h2>
+            <SectionTitle heading='Photo' subHeading='Gallery'/>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}

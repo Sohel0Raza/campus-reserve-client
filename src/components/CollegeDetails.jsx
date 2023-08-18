@@ -6,7 +6,7 @@ const CollegeDetails = () => {
     const [college] = allColleges.filter(college => college._id === id)
     const { collegeName, researchHistory, researchWorks, numberOfResearch, collegeImage, admissionDate, admissionProcess, events, eventsDetails, sports, sportsCategories } = college
     return (
-        <div>
+        <div className="pt-20">
             <div className="shadow-2xl border-b-[2px] border-[#3e8ee4] rounded-lg">
                 <div className="p-10">
                     <div className="md:flex">

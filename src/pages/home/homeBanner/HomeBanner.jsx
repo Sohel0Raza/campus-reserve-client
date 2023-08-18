@@ -5,9 +5,9 @@ const HomeBanner = () => {
   return (
     <div>
       <div className="md:flex justify-center items-center mx-auto mb-5 md:pt-10">
-        <div className="md:py-5 md:w-1/2">
+        <div className="md:py-5 md:w-1/2 pt-20 md-pt-0">
           <h2 className="text-2xl md:text-4xl font-bold leading-10 p-5">
-            <span className="text-[#D62929]">Unlock Your</span> <br />
+            <span className="text-[#2E7FE9]">Unlock Your</span> <br />
             <span className="text-[#151A4F]"> Academic Journey </span>
           </h2>
           <p className="text-gray-600 px-5">

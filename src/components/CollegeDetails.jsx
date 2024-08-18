@@ -1,9 +1,8 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const CollegeDetails = () => {
-    const allColleges = useLoaderData()
-    const { id } = useParams()
-    const [college] = allColleges.filter(college => college._id === id)
+    const college = useLoaderData()
+console.log('college --->', college);
     const { collegeName, researchHistory, researchWorks, numberOfResearch, collegeImage, admissionDate, admissionProcess, events, eventsDetails, sports, sportsCategories } = college
     return (
         <div className="pt-20">
@@ -29,11 +28,11 @@ const CollegeDetails = () => {
                         </div>
                         <div>
                             <h5 className="font-bold text-[#3e8ee4] mt-5">Event & Sports</h5>
-                            <p className="mt-2">Events {events.map(event => <li key={event}>{event}</li>)}</p>
-                            <p className="my-2">EventsDetails: {eventsDetails}</p>
+                            <p className="mt-2">Events {events?.map(event => <li key={event}>{event}</li>)}</p>
+                            <p className="my-2">Events Details: {eventsDetails}</p>
 
-                            <p className="mt-2">Sports {sports.map(sport => <li key={sport}>{sport}</li>)}</p>
-                            <p className="my-2">SportsDetails: {sportsCategories}</p>
+                            <p className="mt-2">Sports {sports?.map(sport => <li key={sport}>{sport}</li>)}</p>
+                            <p className="my-2">Sports Details: {sportsCategories}</p>
                         </div>
                     </div>
                 </div>

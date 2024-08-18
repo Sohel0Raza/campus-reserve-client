@@ -7,7 +7,6 @@ const useCollege = () => {
             const res = await fetch(
                 "http://localhost:5000/colleges"
             );
-            console.log(res)
             return res.json();
         },
     });

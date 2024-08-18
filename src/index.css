@@ -16,16 +16,18 @@ body {
 }
 
 .btn-primary {
-    @apply md:mb-0 py-1 px-2 md:px-6 md:py-2 text-sm shadow-lg hover:rounded-tr-2xl hover:rounded-bl-2xl text-white transition ease-in-out delay-150 bg-[#151A4F]  hover:bg-[#2E7FE9]  duration-300 
+    @apply md:mb-0 py-1 px-2 md:px-6 md:py-2 text-sm shadow-lg text-white transition ease-in-out delay-150 bg-[#151A4F]  hover:bg-[#3f4cda]  duration-300 
 }
 .btn-secondary {
     @apply md:mb-0 py-1 px-2 md:px-6 md:py-3 text-lg rounded text-white bg-[#F16623]  hover:bg-[#953333]  duration-300 
 }
 
 .btn-info {
-    @apply md:mb-0 px-2 py-1 md:px-8 md:py-3 my-3 text-lg uppercase rounded-lg shadow-md bg-gradient-to-r from-lime-500 to-green-500 text-white
+    @apply md:mb-0 px-2 py-2 md:px-4 my-3 text-xs uppercase rounded-lg shadow-inner bg-gradient-to-r from-lime-500 to-green-500 text-white
 }
 
 .btn-outlined {
     @apply md:font-normal transition duration-300 delay-300 ease-in shadow-md my-4 mx-5 md:mb-0 px-2 py-1 md:px-4 md:py-2 md:text-lg rounded-xl hover:bg-[#151A4F] hover:border-transparent border-b-4 border-[#151A4F] hover:text-white 
 }
+
+

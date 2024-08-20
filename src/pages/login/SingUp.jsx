@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import animationData from "../../../public/signup.json";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
@@ -8,6 +8,10 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const SingUp = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
   const handleSingUp = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,18 +22,30 @@ const SingUp = () => {
     createUser(email, password)
       .then((result) => {
         const singUpUser = result.user;
-        upDateUser(singUpUser, name, photo);
-        console.log(singUpUser);
-        form.reset();
-        if (singUpUser) {
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "SingUp SuccessFully",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        }
+        upDateUser(singUpUser, name, photo).then(() => {
+          const saveNewUser = { name, email };
+          fetch("", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(saveNewUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                form.reset();
+                Swal.fire({
+                  position: "center",
+                  icon: "success",
+                  title: "SingUp SuccessFully",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+              }
+              navigate(from, { replace: true });
+            });
+        });
       })
       .catch((error) => {
         form.reset();

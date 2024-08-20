@@ -5,7 +5,7 @@ const useReview = () => {
         queryKey: ["reviews"],
         queryFn: async () => {
             const res = await fetch(
-                "http://localhost:5000/review"
+                "http://localhost:5005/review"
             );
             console.log(res)
             return res.json();

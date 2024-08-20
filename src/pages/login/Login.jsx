@@ -2,7 +2,7 @@ import Lottie from "lottie-react";
 import animationData from "../../../public/login.json";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -11,6 +11,11 @@ const Login = () => {
     const { singIn, signInWithGoogle } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event => {
@@ -82,9 +87,9 @@ const Login = () => {
                     loop={true}
                 ></Lottie>
             </div>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 md:1/2 md:ml-10">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-inner shadow-black md:py-5 bg-base-100 md:1/2 md:ml-10">
                 <form onSubmit={handleLogin} className="card-body">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
+                    <h1 className="text-4xl font-bold">Welcome back!</h1>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>

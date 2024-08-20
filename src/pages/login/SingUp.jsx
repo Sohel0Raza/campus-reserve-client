@@ -69,9 +69,9 @@ const SingUp = () => {
           loop={true}
         ></Lottie>
       </div>
-      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 md:1/2 md:ml-10">
+      <div className="card flex-shrink-0 w-full max-w-sm shadow-inner md:py-5 shadow-black bg-base-100 md:1/2 md:ml-10">
         <form onSubmit={handleSingUp} className="card-body">
-          <h1 className="text-5xl font-bold">SingUp now!</h1>
+          <h1 className="text-4xl font-bold">SingUp now!</h1>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>

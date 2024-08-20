@@ -22,9 +22,11 @@ const SingUp = () => {
     createUser(email, password)
       .then((result) => {
         const singUpUser = result.user;
+        console.log("✌️singUpUser --->", singUpUser);
         upDateUser(singUpUser, name, photo).then(() => {
           const saveNewUser = { name, email };
-          fetch("", {
+          console.log("✌️saveNewUser --->", saveNewUser);
+          fetch("http://localhost:5005/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -33,6 +35,7 @@ const SingUp = () => {
           })
             .then((res) => res.json())
             .then((data) => {
+              console.log("✌️data --->", data);
               if (data.insertedId) {
                 form.reset();
                 Swal.fire({

@@ -7,7 +7,6 @@ const useReview = () => {
             const res = await fetch(
                 "http://localhost:5005/review"
             );
-            console.log(res)
             return res.json();
         },
     });
